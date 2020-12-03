@@ -9,7 +9,10 @@ app = FastAPI()
 
 def is_alive_host(hostname):
     try:
-        page = requests.get("http://" + hostname)
+        if hostname.startswith("http://") or hostname.startswith("https://") :
+            page = requests.get(hostname)
+        else:
+            page = requests.get("http://" + hostname)
         return 100 <= page.status_code < 400
     except requests.exceptions.ConnectionError:
         return False
