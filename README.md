@@ -24,3 +24,10 @@
 
 - задача со *звёздочкой*: завернуть приложение в docker
 - задача на *две звёздочки*: выложить куда-либо (heroku/DigitalOcean/etc) с помощью github-actions/gitlab/jenkins/etc
+
+---
+
+- для доступа к приложению на heroku использовать ссылку вида:
+
+https://pythoninternapp.herokuapp.com/healthz?hostname=google.com
+
